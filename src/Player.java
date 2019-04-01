@@ -1,11 +1,11 @@
-public class Player {
-    protected int score;
+public abstract class Player {
+    private int score;
 
-    public boolean makeDecision(){
-        return true;
-    }
+    public abstract boolean makeDecision();
 
     public int getScore() {
         return score;
     }
+    public void setScore(int score) { this.score = score; }
+    public void addScore(int points) { this.score += points; }
 }
