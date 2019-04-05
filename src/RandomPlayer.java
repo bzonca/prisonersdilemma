@@ -5,4 +5,8 @@ public class RandomPlayer extends Player{
         Random random = new Random();
         return random.nextBoolean();
     }
+
+    public String toString() {
+        return "RandomDecision";
+    }
 }

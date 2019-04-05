@@ -1,3 +1,4 @@
+//User is a type of Player that uses keyboard input to make decisions
 import java.util.Scanner;
 
 public class User extends Player {
@@ -9,6 +10,7 @@ public class User extends Player {
     }
 
     public boolean makeDecision() {
+
         System.out.println("Type 'C' to cooperate, 'D' to defect, 'Q' to quit...");
         String userInput = kb.next();  // Read user input
 
@@ -16,10 +18,8 @@ public class User extends Player {
 
         try {
             if(userInput.equalsIgnoreCase("C")){
-                System.out.println("Chose to cooperate");
                 userDecision = true;
             }else if(userInput.equalsIgnoreCase("D")){
-                System.out.println("Chose to defect");
                 userDecision = false;
             }else if (userInput.equalsIgnoreCase("Q")){
                 System.out.println("Quitting...");

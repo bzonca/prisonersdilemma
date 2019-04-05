@@ -12,6 +12,6 @@ public class AlwaysSame extends Player{
     }
 
     public String toString(){
-        return "AlwaysSame(" + staticDecision + ")";
+        return "Always" + (staticDecision ? "Cooperate" : "Defect");
     }
 }

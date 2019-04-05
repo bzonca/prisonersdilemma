@@ -25,8 +25,10 @@ public class Game {
             t.playTurn();
             System.out.println("Result : " + t.resultToString());
         }
+        System.out.println("\nGame over. Winner : " + getGameWinner());
     }
 
+    //TODO: Account for tie case
     public Player getGameWinner(){
         if(playerA.getScore() > playerB.getScore()){
             //playerA is winner

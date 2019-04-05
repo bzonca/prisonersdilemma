@@ -11,18 +11,18 @@ public class GameManager {
 
     private void runProgramLoop(){
         isProgramActive = true;
+        Scanner kb = new Scanner(System.in);  // Create a Scanner object
         while (isProgramActive){
-            Scanner kb = new Scanner(System.in);  // Create a Scanner object
 
-            System.out.println("Number of turns : ");
+            System.out.print("Number of turns : ");
             int numTurns = kb.nextInt();  // Read user input
 
-            //Create player1 Always true
-            Player player1 = new AlwaysSame(true);
-
+            //Create player1 as a user. Let it use the scanner used previously.
+            //Player player1 = new User(kb);
+            Player player1 = new RandomPlayer();
             //Create player2 Always false
-        //    Player player2 = new AlwaysSame(false);
-            Player player2 = new User(kb);
+            //Player player2 = new AlwaysSame(false);
+            Player player2 = new AlwaysSame(false);
 
             //Create game with parameters
             startGame(player1, player2, numTurns);

@@ -37,12 +37,12 @@ public class Turn {
             //playerA defects while playerB cooperates
             playerAReward = 4;
             playerBReward = 1;
-            resultString = "Player 1 (" + playerA.toString() + ") wins";
+            resultString = "Player1 " + playerA.toString() + " wins";
         }else{
             //playerB defects while playerA cooperates
             playerAReward = 1;
             playerBReward = 4;
-            resultString = "Player 2 (" + playerB.toString() + ") wins";
+            resultString = "Player2 " + playerB.toString() + " wins";
         }
 
         playerA.addScore(playerAReward);
@@ -50,6 +50,10 @@ public class Turn {
     }
 
     public String resultToString() {
-        return resultString;
+        String out = resultString + "\nPayout : Player1 " + playerA.toString() + ": +" + playerAReward
+                + "    Player2 " + playerB.toString() + ": +" + playerBReward +
+                "\nScores : Player1 " + playerA.toString() + ": " + playerA.getScore()
+                + "    Player2 " + playerB.toString() + ": " + playerB.getScore();
+        return out;
     }
 }
