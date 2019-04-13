@@ -19,13 +19,24 @@ public class Game {
 
     //Begins game (Loop through decisions for the number of turns)
     public void begin(){
+        
+        Turn t = null;
+        
         //Begin iterated game loop
         for(int i = 0; i < numTurns; i++){
-            Turn t = new Turn(playerA, playerB);
+            t = new Turn(playerA, playerB);
             t.playTurn();
             System.out.println("Result : " + t.resultToString());
         }
-        System.out.println("\nGame over. Winner : " + getGameWinner());
+        
+        String winnerText = "\nGame over. Winner : " + getGameWinner();
+        System.out.println(winnerText);
+        
+        try {
+            GameManager.displayEndScreenPopup(winnerText, t.getScoresString());
+        } catch (NullPointerException e){
+            System.out.println("0 turns selected!");
+        }
     }
 
     //TODO: Account for tie case

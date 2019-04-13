@@ -7,4 +7,8 @@ public class TitForTat extends Player{
     private boolean getOpponentsLastDecision(){
         return false;
     }
+
+    public String toString() {
+        return "Tit for Tat";
+    }
 }

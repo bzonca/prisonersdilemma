@@ -56,4 +56,9 @@ public class Turn {
                 + "    Player2 " + playerB.toString() + ": " + playerB.getScore();
         return out;
     }
+
+    public String getScoresString() { 
+        return "Scores...\nPlayer1 (" + playerA.toString() + "): " + playerA.getScore()
+                + "\nPlayer2 (" + playerB.toString() + "): " + playerB.getScore();
+    }
 }
