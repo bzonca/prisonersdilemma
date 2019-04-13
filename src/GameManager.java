@@ -34,7 +34,7 @@ public class GameManager extends Application{
         primaryStage.setScene(new Scene(root, 300, 250));
         primaryStage.show();
 
-        //TODO : Port all interaction to javafx
+        //TODO : Port all interaction to javafx + write out what is stage, scene, node
         //GameManager gm = new GameManager();
         //gm.runProgramLoop();
     }
